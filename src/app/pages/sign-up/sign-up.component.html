@@ -1,0 +1,73 @@
+<div class="home-contact">
+    <!-- <app-label text="Login"></app-label>
+    <h2 class="home-text49">Type in the bellow form</h2>
+    <span class="home-text50 textXL">
+      They say there&apos;s no future for the street rascals, nothing for
+      them, leave them to fall. But it isn&apos;t always how you would like
+      it to be, especially when you do nothing for yourself.
+    </span> -->
+    <img src="../../../assets/playground_assets/undraw_sign_in_re_o58h.svg" alt="" style="height: 20%;width: 30%;">
+   
+    <div class="home-form">
+    
+      
+      <h1 class="home-text51">Want to fight pest?</h1>
+      <span class="home-text52 textXL">
+         Sign-Up to enable you to enjoy our services
+      </span>
+      <span class="home-text54 textXS">EMAIL</span>
+      <form [formGroup]="signUpForm" (ngSubmit)="save(signUpForm.value)">
+      <input
+        type="text"
+        placeholder="Email"
+        class="home-textinput1 textSM input"
+        formControlName="email"
+        
+      />
+      <span class="home-text54 textXS">User name</span>
+      <input
+        type="text"
+        placeholder="User Name"
+        class="home-textinput1 textSM input"
+        formControlName="userName"
+        
+      />
+      <span class="home-text54 textXS">Name</span>
+      <input
+        type="text"
+        placeholder=" Name"
+        class="home-textinput1 textSM input"
+        formControlName="name"
+        
+      />
+      <!-- <span class="home-text54 textXS">Phone Number</span>
+      <input
+        type="Number"
+        placeholder="Phone Number"
+        class="home-textinput1 textSM input"
+        formControlName="phoneNumber"
+      /> -->
+      <span class="home-text55 textXS">Password</span>
+    <input 
+    type="password"   
+    class="home-textinput1 textSM input" 
+    placeholder="Password"
+    formControlName="password"
+    />
+      <span class="home-text55 textXS">Confirm Password</span>
+    <input 
+    type="password"   
+    class="home-textinput1 textSM input" 
+    placeholder="Password"
+    formControlName="confirmPassword"
+    />
+
+         <button class="secondary-button-button textXS button home-container49" rootClassName="secondary-button-root-class-name" type="submit" style="margin-left:45%;">Submit</button>
+      
+      </form>
+    </div>
+    
+    
+   
+
+
