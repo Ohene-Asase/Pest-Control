@@ -24,18 +24,14 @@ export class SignUpComponent implements OnInit {
     this.setupForm();
   }
   
-   save(credentials){
-  
-      
+   save(credentials){    
     let success =  this.authService.register(credentials)
       .subscribe((data)=> {
-      console.log(data)
-        
+      if(success){
+        this.toastr.success('Sign-up successfully')
+      }
       },);
-      
-      
-    
-
+      this.router.navigate(['/sign-in']);
    
  }
   setupForm(): void {

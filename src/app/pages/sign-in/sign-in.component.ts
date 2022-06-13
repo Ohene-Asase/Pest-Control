@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/auth/auth.service';
 
 
@@ -15,6 +16,7 @@ signInForm:FormGroup;
   constructor(private fb: FormBuilder,
               private authService: AuthService,
               private router: Router,
+              private toastr: ToastrService
               
     ) { }
 
@@ -30,9 +32,8 @@ signInForm:FormGroup;
       if (!userData) return
       this.authService.setUser(userData)
       this.authService.announceLogin(true)
-      this.router.navigate(['/home'])
-      console.log("trial")
-      
+      this.toastr.success("Signed in Sucessfully")
+      this.router.navigate(['/appointment'])    
     } catch (error) {
       console.log(error);
     } finally {  }
